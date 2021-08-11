@@ -1,0 +1,4 @@
+export const SET_SEARCH_REPOSE = "SET_REPOSE";
+export const SET_REPOSE = "GET_REPOSE";
+export const CHANGE_FETCH = "CHANGE_FETCH";
+export const SET_CURRENT_DATA_USA = "SET_CURRENT_DATA_USA";
