@@ -32,9 +32,6 @@ const ChartStateYear = () => {
       dispatch(setCurrentDataUSA(sortDataUSA(datausa, selectValueState, 'State')))
    }, [datausa, selectValueState])
 
-
-
-
    return (
       <div>
          <div className="selects">
@@ -53,6 +50,7 @@ const ChartStateYear = () => {
             />
          </div>
          <div className="chart">
+            <h2>{selectValueState}</h2>
             <Bar
                height={height}
                data={data}
