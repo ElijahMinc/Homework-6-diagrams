@@ -32,7 +32,7 @@ const ChartStates = () => {
    return (
       <div>
          <Select
-            id={1}
+            id={0}
             sortDataUSA={datausa}
             selectValue='state'
          />
