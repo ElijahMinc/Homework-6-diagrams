@@ -13,7 +13,7 @@ const Select = ({ sortDataUSA, sortDataYears, id, selectValue }) => {
       <select
          defaultValue={selectCurrentDefaultValue}
          data-id={id}
-         onChange={(event) => getValueSelect(event, selectValue)}
+         onChange={(event) => getValueSelect(event, selectValue, id)}
          className={styles.select}
          ref={refSelectYear}
       >
