@@ -17,7 +17,7 @@ const App = () => {
   const [currentSelectState, setCurrentSelectState] = React.useState('')
   const refSelectYear = React.useRef();
 
-  const getValueSelect = (event, selectValue) => {
+  const getValueSelect = (event, selectValue, id) => {
     const select = event.target;
     
     const currentIndexOption = select.selectedIndex;
