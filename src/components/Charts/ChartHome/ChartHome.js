@@ -16,7 +16,7 @@ const ChartHome = () => {
       height,
       data,
       options
-   } = ChartConfig(transfromDataUSA, 'Statistics USA')
+   } = ChartConfig(transfromDataUSA, 'Statistic USA')
 
    React.useEffect(() => {
       dispatch(getRepose(API_URL_MAIN))
@@ -24,6 +24,7 @@ const ChartHome = () => {
 
    return (
       <div className="chart">
+         <h2>Statistic USA</h2>
          <Bar
             height={height}
             data={data}
