@@ -39,6 +39,7 @@ export const ChartConfig = (currentDataUsa, selectValueState) => {
          },
          plugins: {
             legend: {
+               display: false,
                labels: {
                   font: {
                      size: 14
