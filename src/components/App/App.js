@@ -19,21 +19,28 @@ const App = () => {
 
   const getValueSelect = (event, selectValue) => {
     const select = event.target;
+    
+    const currentIndexOption = select.selectedIndex;
 
+    const currentOption = select.options[currentIndexOption];
+
+    const dataIdSetOption = currentOption.dataset.id;
+    
+    
     if (selectValue === "state") {
-      const selectDisabled = refSelectYear.current.options[0];
+      
+      if (id === 2) {
+        
+        const selectDisabled = refSelectYear.current.options[0];
 
-      const currentIndexOption = select.selectedIndex;
+        setCurrentSelectState(dataIdSetOption);
 
-      const currentOption = select.options[currentIndexOption];
-
-      const dataIdSetOption = currentOption.dataset.id;
+        refSelectYear.current.value = selectDisabled.value;
+      }
 
       setCurrentSelectState(dataIdSetOption);
 
       setSelectValueState(event.target.value);
-
-      refSelectYear.current.value = selectDisabled.value;
 
     }
     else if (selectValue === "year") {
