@@ -19,29 +19,32 @@ const App = () => {
 
   const getValueSelect = (event, selectValue, id) => {
     const select = event.target;
-    
+
+    const selectDisabled = refSelectYear.current.options[0];
+
     const currentIndexOption = select.selectedIndex;
 
     const currentOption = select.options[currentIndexOption];
 
     const dataIdSetOption = currentOption.dataset.id;
-    
-    
+
     if (selectValue === "state") {
-      
-      if (id === 2) {
-        
-        const selectDisabled = refSelectYear.current.options[0];
+      if (id === 0) {
 
         setCurrentSelectState(dataIdSetOption);
 
+        setSelectValueState(event.target.value);
+
+      } else {
+
+        const dataIdSetOption = currentOption.dataset.id;
+
+        setCurrentSelectState(dataIdSetOption);
+
+        setSelectValueState(event.target.value);
+        
         refSelectYear.current.value = selectDisabled.value;
       }
-
-      setCurrentSelectState(dataIdSetOption);
-
-      setSelectValueState(event.target.value);
-
     }
     else if (selectValue === "year") {
       const filterDataUSA = datausa.filter(currentState =>
@@ -67,7 +70,6 @@ const App = () => {
     }}>
       < Router >
         <Header />
-        {/* <Preloader /> */}
         {isFetching && <Preloader />}
         <div className={styles.app}>
           <Switch>
