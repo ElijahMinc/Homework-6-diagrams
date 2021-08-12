@@ -37,6 +37,7 @@ const ChartStates = () => {
             selectValue='state'
          />
          <div className="chart">
+            <h2>{selectValueState}</h2>
             <Bar
                height={height}
                data={data}
